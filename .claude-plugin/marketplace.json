@@ -1,0 +1,16 @@
+{
+  "name": "draft-prfaq-section",
+  "owner": {
+    "name": "Jeff Feng"
+  },
+  "metadata": {
+    "description": "Skill for drafting individual PRFAQ sections following Mapbox's PRFAQ standard (Working Backwards adapted for Mapbox)."
+  },
+  "plugins": [
+    {
+      "name": "draft-prfaq-section",
+      "source": "./plugin",
+      "description": "Write or improve a specific section of a Mapbox PRFAQ (Introduction, Press Release, External FAQ, Internal FAQ, headline, problem, solution, quote, journey) — grounded in evidence, structured to the Mapbox PRFAQ standard, and styled with optional voice profile."
+    }
+  ]
+}
