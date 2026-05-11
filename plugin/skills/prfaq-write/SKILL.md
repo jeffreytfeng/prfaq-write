@@ -1,6 +1,6 @@
 ---
-name: draft-prfaq-section
-description: Write a specific PRFAQ section using Mapbox's PRFAQ standard (Working Backwards adapted for Mapbox). Use when the user asks to "draft a PRFAQ section", "write the press release / intro / E-FAQ / I-FAQ", or types "/draft-prfaq-section".
+name: prfaq-write
+description: Write a specific PRFAQ section using Mapbox's PRFAQ standard (Working Backwards adapted for Mapbox). Use when the user asks to "draft a PRFAQ section", "write the press release / intro / E-FAQ / I-FAQ", or types "/prfaq-write".
 argument-hint: "[section] [product-or-topic]  — section: intro | pr | efaq | ifaq | headline | problem | solution | quote | journey"
 user-invocable: true
 ---

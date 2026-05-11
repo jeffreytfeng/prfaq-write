@@ -1,5 +1,5 @@
 {
-  "name": "draft-prfaq-section",
+  "name": "prfaq-write",
   "description": "Write or improve a specific section of a Mapbox PRFAQ (Introduction, Press Release, External FAQ, Internal FAQ, headline, problem, solution, quote, journey) — grounded in evidence, structured to the Mapbox PRFAQ standard, and styled with optional voice profile.",
   "version": "0.1.0",
   "author": {

@@ -1,5 +1,5 @@
 {
-  "name": "draft-prfaq-section",
+  "name": "prfaq-write",
   "owner": {
     "name": "Jeff Feng"
   },
@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "draft-prfaq-section",
+      "name": "prfaq-write",
       "source": "./plugin",
       "description": "Write or improve a specific section of a Mapbox PRFAQ (Introduction, Press Release, External FAQ, Internal FAQ, headline, problem, solution, quote, journey) — grounded in evidence, structured to the Mapbox PRFAQ standard, and styled with optional voice profile."
     }

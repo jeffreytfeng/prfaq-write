@@ -1,4 +1,4 @@
-# draft-prfaq-section
+# prfaq-write
 
 A Claude Code plugin that drafts a single section of a Mapbox PRFAQ — Introduction, Press Release, External FAQ, Internal FAQ, or any of their sub-sections (headline, problem, solution, leader/customer quote, user journey) — following the Mapbox PRFAQ standard.
 
@@ -6,7 +6,7 @@ Built for Mapbox PMs. Bakes Mapbox writing style, the 4-part Working Backwards s
 
 ## What it does
 
-Run `/draft-prfaq-section <section> <product-or-topic>` against any in-progress PRFAQ. The skill:
+Run `/prfaq-write <section> <product-or-topic>` against any in-progress PRFAQ. The skill:
 
 1. Reads your existing PRFAQ draft (if any) plus optional context files in the project (see below).
 2. Drafts the requested section against the Mapbox PRFAQ standard:
@@ -21,17 +21,17 @@ Run `/draft-prfaq-section <section> <product-or-topic>` against any in-progress 
 ## Install
 
 ```
-/plugin marketplace add jeffreytfeng/draft-prfaq-section
-/plugin install draft-prfaq-section@draft-prfaq-section
+/plugin marketplace add jeffreytfeng/prfaq-write
+/plugin install prfaq-write@prfaq-write
 ```
 
 ## Use
 
 ```
-/draft-prfaq-section pr "Modular Maps SDK"
-/draft-prfaq-section efaq path/to/prfaq-draft.md
-/draft-prfaq-section intro
-/draft-prfaq-section
+/prfaq-write pr "Modular Maps SDK"
+/prfaq-write efaq path/to/prfaq-draft.md
+/prfaq-write intro
+/prfaq-write
 ```
 
 Section keywords: `intro` · `pr` · `efaq` · `ifaq` · `headline` · `problem` · `solution` · `quote` · `journey`.
@@ -41,14 +41,14 @@ With no args, the skill prompts you for the section and the product.
 ## What ships in this repo
 
 ```
-draft-prfaq-section/
+prfaq-write/
 ├── .claude-plugin/
 │   └── marketplace.json      # makes this repo installable as a single-plugin marketplace
 ├── plugin/
 │   ├── .claude-plugin/
 │   │   └── plugin.json       # plugin manifest
 │   └── skills/
-│       └── draft-prfaq-section/
+│       └── prfaq-write/
 │           ├── SKILL.md          # the skill definition
 │           └── prfaq-template.md # bundled default Mapbox PRFAQ template
 ├── README.md
