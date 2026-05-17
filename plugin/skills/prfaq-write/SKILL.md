@@ -1,13 +1,13 @@
 ---
 name: prfaq-write
-description: Write a specific PRFAQ section using Mapbox's PRFAQ standard (Working Backwards adapted for Mapbox). Use when the user asks to "draft a PRFAQ section", "write the press release / intro / E-FAQ / I-FAQ", or types "/prfaq-write".
-argument-hint: "[section] [product-or-topic]  — section: intro | pr | efaq | ifaq | headline | problem | solution | quote | journey"
+description: Write a specific PRFAQ section using Mapbox's PRFAQ standard (Working Backwards adapted for Mapbox), and critique an existing PRFAQ draft against Anu and Cherie's review gates
+argument-hint: "[section] [product-or-topic]  — section: intro | pr | efaq | ifaq | headline | problem | solution | quote | journey | critique"
 user-invocable: true
 ---
 
 # PRFAQ Section Drafter
 
-Write or sharpen a specific section of a PRFAQ following the Mapbox PRFAQ standard. The PRFAQ disciplines you to define the customer experience before any engineering starts, and to land approval from Cherie Wong (CTO) and Anu Sharma (GM) before resourcing follows.
+Write or sharpen a specific section of a PRFAQ following the Mapbox PRFAQ standard. The PRFAQ disciplines you to define the customer experience before any engineering starts, and to land approval from Cherie Wong (CTO) and Anu Sharma (VP of Product) before resourcing follows.
 
 ## What is a Mapbox PRFAQ?
 
@@ -22,7 +22,7 @@ A Mapbox PRFAQ is **6 pages max** with four parts, in this order:
 
 Anything beyond 6 pages goes to an appendix.
 
-The PRFAQ is reviewed at least **3 months before launch**. Approval comes from Cherie (CTO/SVP) and Anu (GM). The PRFAQ is a living document — keep updating it through preview.
+The PRFAQ is reviewed at least **3 months before launch**. Approval comes from Cherie (CTO/SVP) and Anu (VP of Product). The PRFAQ is a living document — keep updating it through preview.
 
 The test: if the PR isn't compelling enough that you'd genuinely want to use the product, stop and redesign the product — not the PR.
 
@@ -46,28 +46,21 @@ Parse the arguments to determine:
   - `efaq` — External FAQ (customer-facing) — **comes before I-FAQ in the doc**
   - `ifaq` — Internal FAQ (strategic, financial, technical) — comes second
 
+- `critique` — Run the executive critique (Step 6) on an existing full or partial PRFAQ draft. Use this when the user pastes a draft or says "critique this" / "tear this apart" / "is this ready for Anu/Cherie?". Does not draft new content — only surfaces weaknesses and recommended fixes.
+
 If no section is specified, ask which section the user wants help with.
 
 ### Step 2: Gather context
 
-Read in parallel, in this order of preference. **If any of these files aren't present, silently skip — don't ask the user about each one.**
-
-1. **The existing PRFAQ draft** (if a path was provided) — to understand context, voice, and what's already written.
-2. **The bundled PRFAQ template** at `prfaq-template.md` (in this skill's directory) — for canonical section structure.
-3. **A project-local PRFAQ template** at `Templates/prfaq.md` if it exists — prefer this over the bundled template (the project's house style wins).
-4. **Goals / OKRs** — look for `Knowledge/Context/goals.md`, `goals.md`, or `OKRs.md` at the project root. If found, align the Introduction's business-metric framing and the I-FAQ goal-alignment answer to current goals.
-5. **Stakeholder context** — look for `Knowledge/People/Cherie Wong.md`, `Knowledge/People/Anu Sharma.md`, or similarly named files capturing the perspectives of the PRFAQ approvers. If found, reflect their known priorities in the framing.
-6. **In-progress task notes** — look for `Tasks/active.md` if it exists, for any in-progress PRFAQ work and recent decisions.
-7. **Voice profile** at `Knowledge/Context/my-voice.md` if it exists — apply tone and formatting preferences (Step 2b).
-8. **Google Drive search** — if Drive MCP tools are available (`mcp__*__search_files`), search for relevant meeting notes, research, or existing PRFAQ drafts. Skip silently if no Drive tools are available.
-
-**What to pull from those sources:** customer pain points, named customer quotes, business-metric baselines, competitive signals, hard constraints, pricing precedent.
-
-**Reference PRFAQs** (use to calibrate tone, depth, and format — these are Mapbox-internal Google Drive doc IDs accessible to Mapbox employees):
-
-- `1rMSMGrtJ5MGXgYv_ExWZ7rzHyOeZPsco9P2jM5wmZb4` — MTS Incremental Updates PRFAQ.
-- `17QCxYxQRnAerjgU-n5maPTVhEmkEVMagxgQci-sYjjY` — Mapbox Fleet PRFAQ (broader-scope example).
-- [BMW Navigation SDK launch press release](https://www.businesswire.com/news/home/20201214005607/en/Mapbox-Launches-Navigation-SDK-for-Automotive-BMW-Group-Launch-Partner) — published example to model the press release tone against.
+- Read `Tasks/active.md` for in-progress PRFAQ work.
+- Read `Knowledge/Context/goals.md` for OKR alignment — the introduction explicitly asks how the feature aligns with company goals.
+- Search Google Drive (`mcp__claude_ai_Google_Drive__search_files`) for relevant meeting notes, research, or existing PRFAQ drafts; fall back to `Raw/` if Drive MCP is unavailable.
+- Check `Knowledge/People/` for stakeholder perspectives that should be reflected — especially Cherie Wong and Anu Sharma (the approvers).
+- Look for: customer pain points, named customer quotes, business-metric baselines, competitive signals, hard constraints, pricing precedent.
+- Reference examples (use to calibrate tone, depth, and format):
+  - `1rMSMGrtJ5MGXgYv_ExWZ7rzHyOeZPsco9P2jM5wmZb4` — MTS Incremental Updates PRFAQ.
+  - `17QCxYxQRnAerjgU-n5maPTVhEmkEVMagxgQci-sYjjY` — Mapbox Fleet PRFAQ (broader-scope example).
+  - [BMW Navigation SDK launch press release](https://www.businesswire.com/news/home/20201214005607/en/Mapbox-Launches-Navigation-SDK-for-Automotive-BMW-Group-Launch-Partner) — published example to model the press release tone against.
 
 #### Pre-write prep checklist (especially for the press release)
 
@@ -88,7 +81,7 @@ Before drafting any PR section, work through these 12 questions. The answers won
 
 ### Step 2b: Apply voice profile
 
-If `Knowledge/Context/my-voice.md` was found in Step 2, apply its tone and formatting preferences. If absent, use a neutral PM voice and the Mapbox style rules in Step 4 below.
+Read `Knowledge/Context/my-voice.md` — apply its tone and formatting preferences. If absent, use a neutral PM voice and the Mapbox style rules in Step 5 below.
 
 ### Step 3: Draft using section-specific guidance
 
@@ -200,7 +193,7 @@ The I-FAQ surfaces every hard question Cherie, Anu, and engineering will ask. Th
 
 #### HEADLINE / SUBHEADLINE
 
-- **Headline:** `[City, Date] — Mapbox — [What it does in plain English]`. Must answer: what is this and why does it matter? Sentence casing (only first word capitalized — see Step 4). No jargon. If a stranger would be confused, rewrite. Test: would a journalist use this as an article title?
+- **Headline:** `[City, Date] — Mapbox — [What it does in plain English]`. Must answer: what is this and why does it matter? Sentence casing (only first word capitalized — see Step 5). No jargon. If a stranger would be confused, rewrite. Test: would a journalist use this as an article title?
 - **Subheadline:** One sentence. Who is it for, what specific outcome does it give them? Concrete, not abstract.
 
 #### PROBLEM / SOLUTION / QUOTE / JOURNEY
@@ -354,6 +347,166 @@ Before delivering a draft, check:
 - [ ] Engineers and product marketers have reviewed before the meeting.
 - [ ] If pricing is non-free, the separate Pricing doc is drafted (or scheduled for the 1-month-pre-launch pricing review).
 - [ ] After approval, the plan is to engage Product Marketing for the product introduction plan within the same week.
+
+---
+
+### Step 6: Executive critique — Anu and Cherie review gates
+
+Run this step in two modes:
+- **After drafting** any full section: append a "Critique" block below the draft surfacing weaknesses only (no re-drafting unless asked).
+- **Standalone `critique` mode**: user pastes a full or partial PRFAQ draft; return only the critique output with no new draft content.
+
+Read `Knowledge/People/anu-sharma.md` and `Knowledge/People/cherie-wong.md` for current context before running. The gate descriptions below are stable, but those files carry the latest framing on what each exec cares about right now.
+
+---
+
+#### Cherie's four gates (CTO review)
+
+Evaluate each gate independently. For each, return: **Pass**, **Caution**, or **Flag** with a one-line explanation and a specific fix.
+
+**Gate 1 — Strategy clarity and goal definition**
+
+Tests: Is the finish line specific and measurable? Does every initiative trace cleanly to a revenue or business metric?
+
+Flag if:
+- The Introduction names a vague benefit ("improve developer experience," "grow adoption") instead of a specific measurable outcome ("replace Google Maps SDK on X account by Q3 2026")
+- The business metric in the Introduction doesn't appear again in the I-FAQ goal alignment answer
+- The launch is described without a named milestone or date
+
+Cherie's pushback phrasing: *"I don't know how to connect the dots and how you got there... none of it adds up."*
+
+**Gate 2 — Believable financial story**
+
+Tests: Are growth assumptions backed by a credible pipeline? Does the business case math hold?
+
+Flag if:
+- A revenue target or ARR growth claim is stated without a named customer pipeline
+- The pipeline math is missing (`pipeline ≥ revenue_target / win_rate`)
+- The investment (engineering, GTM) looks disproportionate to the projected return
+- Pricing is "TBD" without a stated path or date for resolution
+
+Cherie's pushback phrasing: *"You all just need a pipeline... if your win rate has been 50%, then you need a 32 million pipeline at least."* / *"Crazy pants"* (disproportionate HC for small returns)
+
+**Gate 3 — Realistic execution plan**
+
+Tests: Is the roadmap concrete with named milestones? Are all cross-team dependencies pre-aligned?
+
+Flag if:
+- Phase timelines are listed without named owners or intermediate milestones
+- A dependency on another team is mentioned without confirmation that the team has been aligned
+- The roadmap has only final dates (GA) but no intermediate gates (private preview → public preview → GA with owners)
+- "Alignment TBD" or "post-PRFAQ coordination" language appears anywhere
+
+Cherie's pushback phrasing: *"Very fluffy... like you've thrown bumper stickers in there and then there's no real road map behind it."* / *"You should have actually gotten alignment... It can't be an after OP conversation."*
+
+**Gate 4 — Resource justification**
+
+Tests: Is every incremental headcount or cost justified? Has AI tooling been tried first?
+
+Flag if:
+- Any incremental headcount ask does not include a sentence explaining what AI tools were tried/leveraged to avoid the hire — this is non-negotiable for Cherie
+- Resource cost is stated without explaining what breaks or degrades without it
+- Multiple engineering teams are requested simultaneously without a priority ordering
+
+Cherie's pushback phrasing: *"I would not approve any incremental funding."* (when AI mandate isn't addressed)
+
+---
+
+#### Anu's five review lenses (VP Product review)
+
+**Lens 1 — Metrics-first framing**
+
+Tests: Are outcomes stated in numbers? Is the "so what" quantified?
+
+Flag if:
+- The business metric in the Introduction is qualitative ("improve retention") rather than quantified ("reduce logo churn by 2pp")
+- The adoption goal in I-FAQ Q11 is directional ("increase") without a number and timeframe
+- The WOW moment in the PR lands on a feature description rather than a customer outcome with magnitude
+
+Anu's pushback: *"How does this move our key metrics?"*
+
+**Lens 2 — Dangling references and next-step completeness**
+
+Tests: Every forward-looking statement has either an ETA or a named DFD owner. Every claim that implies a follow-up answers its own obvious follow-up.
+
+Flag if:
+- Any "next step" or "we will" statement in the I-FAQ lacks a date or owner
+- The document says a customer requested something without confirming whether it was provided
+- The PRFAQ says "alignment is in progress" without a date by which alignment will be confirmed
+- The Cherie ask in the Introduction names a decision without explaining what happens if Cherie says no
+
+Anu's writing rule: *anticipate the questions your update creates; never leave a "next step" without an ETA or DFD.*
+
+**Lens 3 — Competitive coverage**
+
+Tests: Is there a real competitive answer, not just positioning language?
+
+Flag if:
+- I-FAQ Q7 lists competitors by name without explaining the specific dimension where Mapbox wins (and by how much)
+- The E-FAQ says "unlike alternatives" without specifics (acceptable only if legal has flagged competitor naming)
+- No answer addresses the "why not just use [obvious alternative]?" question a customer would ask
+
+Anu's pushback: *"What are competitors doing here?"*
+
+**Lens 4 — Why now**
+
+Tests: Is the timing justified? Would the answer to "why not ship this in six months?" be satisfying?
+
+Flag if:
+- The PRFAQ doesn't name the external forcing function (a customer deadline, a competitive move, a regulatory change, a contract renewal)
+- The "why now" is based entirely on internal roadmap scheduling rather than customer or market urgency
+- The launch window is more than 12 months away without a credible reason for the long lead time
+
+Anu's pushback: *"Why now? Why not later?"*
+
+**Lens 5 — Customer outcome clarity**
+
+Tests: Does the customer's life actually get better in a concrete way? Is the WOW moment earned?
+
+Flag if:
+- The PR describes what Mapbox shipped, not what the customer can now do
+- The customer quote (real or synthetic) is generic ("Great product. Highly recommend.") rather than specific about the problem solved and the magnitude of improvement
+- The E-FAQ Q2 ("What can I do now that I couldn't do before?") reads as a feature list rather than a before-and-after customer story
+- No named customer vertical or persona is tied to the launch with specific use case evidence
+
+Anu's pushback: *"What's the customer outcome?"* / *"Only adoption can win respect... have we cracked something unique about the UX?"*
+
+---
+
+#### Critique output format
+
+When running the critique, output the following structure. Do not re-draft sections — flag, explain, and prescribe the fix.
+
+```
+## PRFAQ Critique — [Product / Section Name]
+
+### Cherie's gates
+| Gate | Status | Issue | Fix |
+|------|--------|-------|-----|
+| G1 Strategy clarity | 🔴 / 🟡 / 🟢 | [one line] | [one line] |
+| G2 Financial story | ... | | |
+| G3 Execution plan | ... | | |
+| G4 Resource justification | ... | | |
+
+### Anu's lenses
+| Lens | Status | Issue | Fix |
+|------|--------|-------|-----|
+| L1 Metrics-first | 🔴 / 🟡 / 🟢 | [one line] | [one line] |
+| L2 Dangling references | ... | | |
+| L3 Competitive coverage | ... | | |
+| L4 Why now | ... | | |
+| L5 Customer outcome | ... | | |
+
+### Top 3 blockers before this goes to review
+1. [Most critical — likely causes the meeting to fail or be rescheduled]
+2. [Second most critical]
+3. [Third most critical]
+
+### Approval-readiness verdict
+[One sentence: "Ready to schedule" / "Ready with fixes below" / "Not ready — resolve blockers first."]
+```
+
+Use 🔴 for issues that would likely cause Cherie or Anu to stop the meeting, ask for a re-do, or withhold approval. Use 🟡 for issues that would generate pointed questions the PM should pre-empt. Use 🟢 when the gate is cleanly cleared.
 
 ---
 
