@@ -1,12 +1,12 @@
 # prfaq-write
 
-A Claude Code plugin that drafts a single section of a Mapbox PRFAQ — Introduction, Press Release, External FAQ, Internal FAQ, or any of their sub-sections (headline, problem, solution, leader/customer quote, user journey) — following the Mapbox PRFAQ standard.
+A Claude Code plugin that drafts and critiques Mapbox PRFAQs. Draft any section — Introduction, Press Release, External FAQ, Internal FAQ, or any sub-section — then run a critique pass that flags unsupported claims, logical gaps, and weak persuasive arguments before the doc goes to review.
 
-Built for Mapbox PMs. Bakes Mapbox writing style, the 4-part Working Backwards structure, the Cherie + Anu approval gates, and the Legal-before-coding rule into every draft.
+Built for Mapbox PMs. Bakes Mapbox writing style, the 4-part Working Backwards structure, the approval-readiness checklist, and the Legal-before-coding rule into every draft.
 
 ## What it does
 
-Run `/prfaq-write <section> <product-or-topic>` against any in-progress PRFAQ. The skill:
+**Draft mode** — Run `/prfaq-write <section> <product-or-topic>` against any in-progress PRFAQ. The skill:
 
 1. Reads your existing PRFAQ draft (if any) plus optional context files in the project (see below).
 2. Drafts the requested section against the Mapbox PRFAQ standard:
@@ -16,7 +16,18 @@ Run `/prfaq-write <section> <product-or-topic>` against any in-progress PRFAQ. T
    - **Internal FAQ** — 13 required questions in order, including the synthetic customer quote (Q13) that populates ¶5 of the press release.
    - **Headline / problem / solution / leader quote / customer quote / user journey** — any individual PR sub-section on its own.
 3. Applies Mapbox writing style — no "utilize," no "leverage," no "users" for customers, no pejorative "you," no possessive "Mapbox's," no competitor names in external sections, Oxford comma, sentence casing, active voice.
-4. Runs a final pass against a structured review checklist covering structure, voice, approval-readiness (3-month lead time, Legal review with Laurel Finch, Cherie + Anu invite).
+4. Runs a final pass against a structured review checklist covering structure, voice, and approval-readiness (3-month lead time, Legal review, Cherie + Anu invite).
+
+**Critique mode** — Run `/prfaq-write critique` (or paste a draft and ask it to critique). The skill reads the full or partial PRFAQ and flags weaknesses across six dimensions:
+
+- **Unsupported claims** — assertions a reviewer could challenge with "how do you know that?" that have no data, quote, or citation behind them.
+- **Logical gaps** — problem/solution mismatches, "why now" statements without a forcing function, dependencies listed without confirmation from the dependent team.
+- **Vague language** — TBDs, directional-but-unmeasurable outcomes ("improve," "accelerate"), and "we're exploring" placeholders that mask unresolved decisions.
+- **Weak problem framing** — inconvenience described as pain, no named persona or vertical, no evidence the problem is real and material.
+- **Solution not earning the WOW** — feature-list writing instead of customer outcomes, generic quotes, implicit before/after contrast.
+- **Internal consistency** — conflicts between the Introduction's business metric and the I-FAQ adoption goal, timeline contradictions, scope claimed in one place and limited in another.
+
+Output is a table with section reference, severity (🔴 blocks approval / 🟡 generates questions), one-line issue, and one-line fix — plus the top three gaps and an overall assessment. After drafting any full section, the skill automatically appends a critique block so you see the weaknesses before you share.
 
 ## Install
 
@@ -34,7 +45,7 @@ Run `/prfaq-write <section> <product-or-topic>` against any in-progress PRFAQ. T
 /prfaq-write
 ```
 
-Section keywords: `intro` · `pr` · `efaq` · `ifaq` · `headline` · `problem` · `solution` · `quote` · `journey`.
+Section keywords: `intro` · `pr` · `efaq` · `ifaq` · `headline` · `problem` · `solution` · `quote` · `journey` · `critique`.
 
 With no args, the skill prompts you for the section and the product.
 
@@ -83,7 +94,7 @@ The test: if the PR isn't compelling enough that you'd genuinely want to use the
 
 ## Why use this
 
-PRFAQ reviews stall on the same things every time: a fuzzy Cherie ask, a launch-size score nobody agreed on, a press release that buries the WOW moment, an E-FAQ that ducks pricing, an I-FAQ with no adoption goal, a missing synthetic customer quote, a competitor name that should never have been in the external sections. This skill bakes the Mapbox PRFAQ standard's checks into the draft, so reviewers don't have to.
+PRFAQ reviews stall on the same things every time: a fuzzy Cherie ask, a launch-size score nobody agreed on, a press release that buries the WOW moment, an E-FAQ that ducks pricing, an I-FAQ with no adoption goal, a missing synthetic customer quote, a competitor name that should never have been in the external sections. This skill bakes the Mapbox PRFAQ standard's checks into every draft — and the critique pass catches unsupported claims and weak arguments before a reviewer does.
 
 ## License
 
