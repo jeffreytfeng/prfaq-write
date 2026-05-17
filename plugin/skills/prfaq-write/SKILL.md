@@ -1,6 +1,6 @@
 ---
 name: prfaq-write
-description: Write a specific PRFAQ section using Mapbox's PRFAQ standard (Working Backwards adapted for Mapbox), and critique an existing PRFAQ draft against Anu and Cherie's review gates
+description: Write a specific PRFAQ section using Mapbox's PRFAQ standard (Working Backwards adapted for Mapbox), or critique a draft for weak claims, logical gaps, and unsupported arguments
 argument-hint: "[section] [product-or-topic]  — section: intro | pr | efaq | ifaq | headline | problem | solution | quote | journey | critique"
 user-invocable: true
 ---
@@ -350,163 +350,100 @@ Before delivering a draft, check:
 
 ---
 
-### Step 6: Executive critique — Anu and Cherie review gates
+### Step 6: Document critique
 
 Run this step in two modes:
 - **After drafting** any full section: append a "Critique" block below the draft surfacing weaknesses only (no re-drafting unless asked).
 - **Standalone `critique` mode**: user pastes a full or partial PRFAQ draft; return only the critique output with no new draft content.
 
-Read `Knowledge/People/anu-sharma.md` and `Knowledge/People/cherie-wong.md` for current context before running. The gate descriptions below are stable, but those files carry the latest framing on what each exec cares about right now.
-
 ---
 
-#### Cherie's four gates (CTO review)
+#### What to look for
 
-Evaluate each gate independently. For each, return: **Pass**, **Caution**, or **Flag** with a one-line explanation and a specific fix.
+Work through each of the six categories below. For each issue found, record: where it appears, what the problem is, and what would fix it.
 
-**Gate 1 — Strategy clarity and goal definition**
+**1. Unsupported claims**
 
-Tests: Is the finish line specific and measurable? Does every initiative trace cleanly to a revenue or business metric?
+Flag every assertion that a reviewer could reasonably ask "how do you know that?" and find no answer in the doc.
 
-Flag if:
-- The Introduction names a vague benefit ("improve developer experience," "grow adoption") instead of a specific measurable outcome ("replace Google Maps SDK on X account by Q3 2026")
-- The business metric in the Introduction doesn't appear again in the I-FAQ goal alignment answer
-- The launch is described without a named milestone or date
+- Statements about customer pain ("developers lose hours every day...") without a data source, a named customer, or research citation
+- Adoption or growth claims ("this will capture X% of the market") without a pipeline, a baseline, or a comparable
+- Superiority claims ("the fastest," "the only solution") without a benchmark or a named comparison point
+- Pricing rationale stated as fact without evidence (competitive pricing data, willingness-to-pay research, COGS analysis)
+- "Customers love X" / "customers struggle with Y" without a quote, a survey result, or a named reference
 
-Cherie's pushback phrasing: *"I don't know how to connect the dots and how you got there... none of it adds up."*
+**2. Logical gaps**
 
-**Gate 2 — Believable financial story**
+Flag arguments where the conclusion doesn't follow cleanly from the premises.
 
-Tests: Are growth assumptions backed by a credible pipeline? Does the business case math hold?
+- The problem paragraph describes one pain point but the solution solves a different one
+- The "why Mapbox" argument relies on capabilities that are generic or widely available (not differentiated)
+- The "why now" timing is stated without a forcing function — a customer deadline, a competitive move, a market shift, or a contract event that makes now meaningfully different from six months from now
+- An adoption goal is named but the measurement plan doesn't instrument the metric needed to track it
+- A dependency is listed in the I-FAQ without confirming the dependent team has agreed to it
 
-Flag if:
-- A revenue target or ARR growth claim is stated without a named customer pipeline
-- The pipeline math is missing (`pipeline ≥ revenue_target / win_rate`)
-- The investment (engineering, GTM) looks disproportionate to the projected return
-- Pricing is "TBD" without a stated path or date for resolution
+**3. Vague language masking unresolved decisions**
 
-Cherie's pushback phrasing: *"You all just need a pipeline... if your win rate has been 50%, then you need a 32 million pipeline at least."* / *"Crazy pants"* (disproportionate HC for small returns)
+Flag language that reads like a placeholder for a decision the author hasn't made yet.
 
-**Gate 3 — Realistic execution plan**
+- "TBD," "to be determined," or "in progress" on anything a reviewer would need to evaluate the proposal (pricing, timeline, scope, resourcing)
+- Outcome language that is directional but not measurable ("improve," "increase," "enhance," "accelerate") where a number is possible
+- Scope described in terms of effort ("we will invest in X") rather than outcome ("customers will be able to do Y by Z date")
+- "We are exploring" or "we will evaluate" as a substitute for a stated position
 
-Tests: Is the roadmap concrete with named milestones? Are all cross-team dependencies pre-aligned?
+**4. Weak problem framing**
 
-Flag if:
-- Phase timelines are listed without named owners or intermediate milestones
-- A dependency on another team is mentioned without confirmation that the team has been aligned
-- The roadmap has only final dates (GA) but no intermediate gates (private preview → public preview → GA with owners)
-- "Alignment TBD" or "post-PRFAQ coordination" language appears anywhere
+The press release lives or dies on whether the problem is real and viscerally felt. Flag:
 
-Cherie's pushback phrasing: *"Very fluffy... like you've thrown bumper stickers in there and then there's no real road map behind it."* / *"You should have actually gotten alignment... It can't be an after OP conversation."*
+- The problem paragraph describes inconvenience rather than a material cost (lost revenue, lost time, lost contracts, failed use cases)
+- The current workaround (¶3) is described so charitably that the reader doesn't feel the pain of it
+- The problem is described at the category level ("maps are hard") rather than at the specific use-case level that this product actually solves
+- No named customer type, vertical, or persona is attached to the problem — it reads as a hypothetical rather than an observed reality
 
-**Gate 4 — Resource justification**
+**5. Solution not earning the WOW moment**
 
-Tests: Is every incremental headcount or cost justified? Has AI tooling been tried first?
+Flag cases where the solution paragraph describes what was built rather than what the customer can now do.
 
-Flag if:
-- Any incremental headcount ask does not include a sentence explaining what AI tools were tried/leveraged to avoid the hire — this is non-negotiable for Cherie
-- Resource cost is stated without explaining what breaks or degrades without it
-- Multiple engineering teams are requested simultaneously without a priority ordering
+- The WOW moment is a feature ("includes a new API endpoint") rather than an outcome ("a developer can now do X in one call that previously required three round trips and a data-cleaning step")
+- The before/after contrast is implicit — the reader has to infer the improvement rather than feel it directly
+- The customer quote (real or synthetic) is generic praise rather than a specific description of the problem solved and the magnitude of change
+- The solution claims differentiation but the specific dimension of superiority (faster, cheaper, more accurate, easier to integrate) is not named
 
-Cherie's pushback phrasing: *"I would not approve any incremental funding."* (when AI mandate isn't addressed)
+**6. Internal consistency**
 
----
+Flag cases where the document contradicts itself or where a claim in one section isn't supported by content elsewhere.
 
-#### Anu's five review lenses (VP Product review)
-
-**Lens 1 — Metrics-first framing**
-
-Tests: Are outcomes stated in numbers? Is the "so what" quantified?
-
-Flag if:
-- The business metric in the Introduction is qualitative ("improve retention") rather than quantified ("reduce logo churn by 2pp")
-- The adoption goal in I-FAQ Q11 is directional ("increase") without a number and timeframe
-- The WOW moment in the PR lands on a feature description rather than a customer outcome with magnitude
-
-Anu's pushback: *"How does this move our key metrics?"*
-
-**Lens 2 — Dangling references and next-step completeness**
-
-Tests: Every forward-looking statement has either an ETA or a named DFD owner. Every claim that implies a follow-up answers its own obvious follow-up.
-
-Flag if:
-- Any "next step" or "we will" statement in the I-FAQ lacks a date or owner
-- The document says a customer requested something without confirming whether it was provided
-- The PRFAQ says "alignment is in progress" without a date by which alignment will be confirmed
-- The Cherie ask in the Introduction names a decision without explaining what happens if Cherie says no
-
-Anu's writing rule: *anticipate the questions your update creates; never leave a "next step" without an ETA or DFD.*
-
-**Lens 3 — Competitive coverage**
-
-Tests: Is there a real competitive answer, not just positioning language?
-
-Flag if:
-- I-FAQ Q7 lists competitors by name without explaining the specific dimension where Mapbox wins (and by how much)
-- The E-FAQ says "unlike alternatives" without specifics (acceptable only if legal has flagged competitor naming)
-- No answer addresses the "why not just use [obvious alternative]?" question a customer would ask
-
-Anu's pushback: *"What are competitors doing here?"*
-
-**Lens 4 — Why now**
-
-Tests: Is the timing justified? Would the answer to "why not ship this in six months?" be satisfying?
-
-Flag if:
-- The PRFAQ doesn't name the external forcing function (a customer deadline, a competitive move, a regulatory change, a contract renewal)
-- The "why now" is based entirely on internal roadmap scheduling rather than customer or market urgency
-- The launch window is more than 12 months away without a credible reason for the long lead time
-
-Anu's pushback: *"Why now? Why not later?"*
-
-**Lens 5 — Customer outcome clarity**
-
-Tests: Does the customer's life actually get better in a concrete way? Is the WOW moment earned?
-
-Flag if:
-- The PR describes what Mapbox shipped, not what the customer can now do
-- The customer quote (real or synthetic) is generic ("Great product. Highly recommend.") rather than specific about the problem solved and the magnitude of improvement
-- The E-FAQ Q2 ("What can I do now that I couldn't do before?") reads as a feature list rather than a before-and-after customer story
-- No named customer vertical or persona is tied to the launch with specific use case evidence
-
-Anu's pushback: *"What's the customer outcome?"* / *"Only adoption can win respect... have we cracked something unique about the UX?"*
+- The business metric named in the Introduction doesn't connect to the adoption goal in I-FAQ Q11 or the measurement plan in I-FAQ Q12
+- The launch timeline in the Introduction conflicts with the phased timeline in I-FAQ Q10
+- A capability described as in-scope in I-FAQ Q5 is listed as a limitation in I-FAQ Q6 (or vice versa) without explanation
+- The customer quote describes a benefit the press release doesn't mention
 
 ---
 
 #### Critique output format
 
-When running the critique, output the following structure. Do not re-draft sections — flag, explain, and prescribe the fix.
+Do not re-draft sections — flag, explain, and prescribe the fix. Use this structure:
 
 ```
 ## PRFAQ Critique — [Product / Section Name]
 
-### Cherie's gates
-| Gate | Status | Issue | Fix |
-|------|--------|-------|-----|
-| G1 Strategy clarity | 🔴 / 🟡 / 🟢 | [one line] | [one line] |
-| G2 Financial story | ... | | |
-| G3 Execution plan | ... | | |
-| G4 Resource justification | ... | | |
+### Issues found
 
-### Anu's lenses
-| Lens | Status | Issue | Fix |
-|------|--------|-------|-----|
-| L1 Metrics-first | 🔴 / 🟡 / 🟢 | [one line] | [one line] |
-| L2 Dangling references | ... | | |
-| L3 Competitive coverage | ... | | |
-| L4 Why now | ... | | |
-| L5 Customer outcome | ... | | |
+| # | Section | Severity | Issue | Fix |
+|---|---------|----------|-------|-----|
+| 1 | [e.g. PR ¶2, I-FAQ Q3] | 🔴 / 🟡 | [one-line description] | [one-line fix] |
+| 2 | ... | | | |
 
-### Top 3 blockers before this goes to review
-1. [Most critical — likely causes the meeting to fail or be rescheduled]
+### Top gaps before this goes to review
+1. [The issue most likely to cause a reviewer to ask for a rewrite]
 2. [Second most critical]
 3. [Third most critical]
 
-### Approval-readiness verdict
-[One sentence: "Ready to schedule" / "Ready with fixes below" / "Not ready — resolve blockers first."]
+### Overall assessment
+[One sentence: "Strong draft — minor gaps to close." / "Solid structure, but the problem framing and [X] need evidence before review." / "Core argument needs rework — the problem/solution match is unclear."]
 ```
 
-Use 🔴 for issues that would likely cause Cherie or Anu to stop the meeting, ask for a re-do, or withhold approval. Use 🟡 for issues that would generate pointed questions the PM should pre-empt. Use 🟢 when the gate is cleanly cleared.
+Use 🔴 for issues that undermine the core argument or would block approval (unsupported key claims, logical disconnects, major missing evidence). Use 🟡 for issues that would generate skeptical questions a sharp reviewer would ask (vague language, thin competitive framing, directional goals without numbers).
 
 ---
 
