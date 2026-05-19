@@ -20,9 +20,11 @@ A Mapbox PRFAQ is **6 pages max** with four parts, in this order:
 3. **External FAQ (E-FAQ)** — customer-facing questions
 4. **Internal FAQ (I-FAQ)** — strategic, financial, and technical questions for Mapbox leadership.
 
-Anything beyond 6 pages goes to an appendix.
+Anything beyond 6 pages goes to an appendix. Include page numbers and mark **Mapbox Confidential** in the footer.
 
-The PRFAQ is reviewed at least **3 months before launch**. Approval comes from Cherie (CTO/SVP) and Anu (VP of Product). The PRFAQ is a living document — keep updating it through preview.
+The PRFAQ is reviewed at least **3 months before launch**. Approval comes from Cherie (CTO/SVP) and Anu (VP of Product), plus Peter (SVP). The PRFAQ is a living document — keep updating it through preview.
+
+**The PRFAQ names candidate customers.** It provides as much detail and specificity as possible on which customers would benefit, how they would achieve their goals, and why they would find the product remarkable. If you cannot name a customer and clearly identify their needs to win their business, the PRFAQ will not meet expectations.
 
 The test: if the PR isn't compelling enough that you'd genuinely want to use the product, stop and redesign the product — not the PR.
 
@@ -99,6 +101,8 @@ The introduction makes the PRFAQ review meeting efficient. Cover, in order:
 - **Do we need a primer?** Optional. If the reader needs background context (e.g. explaining MTS before pitching MTS Incremental Updates), link to it or include a short summary.
 
 Keep the introduction tight — it exists so reviewers don't have to ask these questions in the meeting.
+
+Mark **Mapbox Confidential** in the document footer and include page numbers.
 
 ---
 
@@ -183,7 +187,7 @@ The I-FAQ surfaces every hard question Cherie, Anu, and engineering will ask. Th
 8. **Are there any internal dependencies/blockers?** — Named teams and named owners.
 9. **What is pricing for the feature?** — Include internal pricing information that won't be publicly messaged. If a separate Pricing doc exists (Cherie's template), summarize and link.
 10. **When are we launching the feature?** — More detailed than the public timeline. Include private preview → public preview → GA stages with target dates.
-11. **What is our adoption goal?** — At minimum, set a goal for the upcoming launch phase. Ideally for all phases.
+11. **What is our adoption goal?** — At minimum, set a goal for the upcoming launch phase. Ideally for all phases. Good metrics are **(i) controllable, (ii) actionable, (iii) reflective of lived user experience.** If using output metrics (ARR, adoption), acknowledge they are not directly controllable and explain the causal chain. If using input metrics (e.g. re-route rate), explain the framework that ties them to the desired impact. No weasel words ("significant," "excellent") in place of numbers.
 12. **How will we measure adoption?** — Dashboard, target adopters sheet, or other concrete instrumentation.
 13. **Sample customer quote.** — Required even if no real customer is on record. Write a synthetic but grounded quote from a customer already interested in the feature; describe their challenge, how the feature solves it, and the business impact. **This quote populates ¶5 of the press release.**
 
@@ -246,6 +250,7 @@ The PRFAQ is a Mapbox external-comms artifact. The press release will be quoted 
 | tool (to describe a Mapbox product) | product, solution, technology |
 | thrive, synergy, groundbreaking | (rephrase — corporate jargon) |
 | market-leading, world's first, cutting edge, transformative, revolutionize | (rephrase — hyperbolic / salesy) |
+| significant, excellent (as substitutes for metrics) | use a specific number or quantitative metric; editorialization can follow a metric, but never replace it |
 | Happy Mapping (sign-off) | Specific call to action; "Team Mapbox" for emails |
 
 **Mapbox brand specifics:**
@@ -299,6 +304,8 @@ Before delivering a draft, check:
 - [ ] **Launch size scored** (Large / Medium / Small) using the four-question rubric.
 - [ ] **6-page cap on the main body.** Anything else moves to an appendix.
 - [ ] **External FAQ comes before Internal FAQ.**
+- [ ] Document marked **Mapbox Confidential** in the footer with page numbers.
+- [ ] **Candidate customers are named** — the PRFAQ identifies specific customers and explains how they benefit. If you cannot name a customer, the doc will not meet expectations.
 
 **Press release**
 
@@ -315,12 +322,13 @@ Before delivering a draft, check:
 - [ ] Pricing answer is specific. If free, the justification is included (COGS, competitive landscape, willingness-to-pay evidence).
 - [ ] Platforms (iOS, Android, Cloud/Web) explicitly broken out.
 - [ ] Customer-facing limitations from I-FAQ Q6 are surfaced here.
+- [ ] **No mention of v2** — do not telegraph that the product is not yet ready. This signals incompleteness and delays customer action.
 
 **Internal FAQ**
 
 - [ ] All 13 required questions answered, in order.
 - [ ] Goal alignment is concrete (named OKR / company priority).
-- [ ] Adoption goal and measurement plan are specific.
+- [ ] Adoption goal and measurement plan are specific — metrics are controllable, actionable, and reflective of lived user experience. No weasel words ("significant," "excellent") in place of quantitative metrics.
 - [ ] **Sample customer quote** drafted — even if synthetic.
 - [ ] Internal pricing / packaging detail that's not publicly messaged is captured.
 - [ ] Dependencies and blockers name teams and owners.
@@ -343,10 +351,12 @@ Before delivering a draft, check:
 - [ ] PRFAQ is being scheduled at least **3 months before launch.**
 - [ ] **Manager + service-organization leader have reviewed** before the formal review meeting — they catch the questions internal and external stakeholders will ask.
 - [ ] **Legal team review (Laurel Finch) has happened** before the PRFAQ Review Meeting — Legal is engaged at the PRFAQ stage, not after, and their review covers the new feature/product before coding starts.
-- [ ] Cherie + Anu are on the review invite.
+- [ ] Cherie + Anu + **Peter (SVP)** are on the review invite.
 - [ ] Engineers and product marketers have reviewed before the meeting.
 - [ ] If pricing is non-free, the separate Pricing doc is drafted (or scheduled for the 1-month-pre-launch pricing review).
 - [ ] After approval, the plan is to engage Product Marketing for the product introduction plan within the same week.
+- [ ] **Feature definition was not delegated to engineers** — if development will take 2+ weeks, the PM must own the definition before handing off.
+- [ ] Review is not being triggered by a high-stakes forcing function (private preview launch, deadline). The PRFAQ should come before, not in reaction to, the forcing function.
 
 ---
 
@@ -455,8 +465,14 @@ Use 🔴 for issues that undermine the core argument or would block approval (un
 - The PR is a design tool, not marketing copy. It forces precision about what matters to the customer.
 - The PRFAQ is a living document. Keep updating it through preview as customer learnings come in.
 - **Legal review happens at the PRFAQ stage**, before coding starts — not after the PRFAQ is approved. Loop in Laurel Finch (Legal) before the formal review meeting with Cherie and Anu.
-- **Pre-review path:** PM → manager → service organization leader → Legal (Laurel) → PRFAQ Review Meeting (Cherie + Anu, plus Service / Marketing / Finance / Customer Engagement stakeholders). After approval, engage Product Marketing immediately to start the product introduction plan.
+- **Pre-review path:** PM → manager → service organization leader → Legal (Laurel) → PRFAQ Review Meeting (Cherie + Anu + Peter, plus Service / Marketing / Finance / Customer Engagement stakeholders). After approval, engage Product Marketing immediately to start the product introduction plan.
+- **Peter review is required.** Confirm that what you're shipping has been reviewed with Peter (SVP) before it goes to public use. His context refines the proposal, helps disseminate information with customers and internal teams, and validates direction. If it's not being reviewed with Peter, it's a disservice to the team and the business.
 - After PRFAQ approval, open Legal-followup, Security, and Billing tickets within one week.
+- **Don't mention v2 in the E-FAQ.** It signals the product is not ready and delays customer action.
+- **Don't use weasel words ("significant," "excellent") as substitutes for metrics.** Editorialization can follow a metric ("grew 30%, significantly ahead of goal"), but never replace it. A metric that cannot be stated precisely is a strategy that hasn't been resolved.
+- **Don't delegate feature definition to engineers** for work that will take 2+ weeks. The PM owns definition.
+- **Don't demo technology for its own sake** as a stand-in for a product demo. The demo must identify the specific customer pain, show how the customer uses the product, and explain why this is remarkable.
+- **Don't make a case based on "we've never done this before."** Future growth requires doing things differently; novelty is not a strategy argument.
 - For Medium/Large launches, prepare a "Customer Facing PRFAQ Version" (PDF with confidential footer) for preview testing.
 - Reference example PRFAQs: MTS Incremental Updates (`1rMSMGrtJ5MGXgYv_ExWZ7rzHyOeZPsco9P2jM5wmZb4`) and Mapbox Fleet (`17QCxYxQRnAerjgU-n5maPTVhEmkEVMagxgQci-sYjjY`).
 - **Reference published press release:** [Mapbox + BMW Navigation SDK launch](https://www.businesswire.com/news/home/20201214005607/en/Mapbox-Launches-Navigation-SDK-for-Automotive-BMW-Group-Launch-Partner) — model your PR tone against this.

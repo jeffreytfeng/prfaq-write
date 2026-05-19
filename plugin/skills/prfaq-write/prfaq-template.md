@@ -1,156 +1,128 @@
-# [Product Name] PRFAQ
-
-> Mapbox PRFAQ — Working Backwards adapted for Mapbox. 6 pages max in the main body. Anything beyond moves to an appendix. Reviewed at least 3 months before launch. Approval: Cherie Wong (CTO/SVP) + Anu Sharma (GM).
+# PRFAQ Template
+*Mapbox Working Backwards | 6 pages max | Mapbox Confidential*
 
 ---
 
 ## Introduction
 
-**What we need from Cherie today:** [one sentence — the explicit decision being requested, e.g. "approve resourcing for engineering + GTM"]
+**What do we need from Cherie today?**
+[One sentence naming the explicit ask — e.g., "Approve resourcing for engineering + GTM to move to private preview."]
 
-**Pre-readers:** [engineers and product marketers consulted before this meeting]
+**Who has already reviewed this PRFAQ?**
+[Name the engineers, product marketers, and service org leaders consulted before this meeting.]
 
-**Launch size:** [Large / Medium / Small — score on customer reach, testing required, new SKU?, revenue (Large 9–11, Medium 7–8, Small 4–6)]. [New product / new feature on existing product / update.]
+**Launch size:** [Large / Medium / Small] — [score: Large 9–11, Medium 7–8, Small 4–6] | [New product / New feature on existing product / Update]
 
-**Price:** [paid amount / free with justification / TBD]
+**Is there a price?** [Paid at $X / Free — [one-sentence justification] / TBD]
 
-**Business metric we are moving:** [the named metric — not vague benefit language. This is the resourcing justification.]
+**What is the business metric we are moving?**
+[Named metric — not vague benefit language. This is the resourcing justification.]
 
-**Primer (optional):** [background context the reader needs, e.g. a one-paragraph explanation of the parent product]
+**Primer (optional):**
+[If reviewers need background context, link to it or include a short summary.]
 
 ---
 
 ## Press Release
 
-**Head:** [Plain-English title — journalist-usable, no jargon. Sentence casing.]
+# [HEADLINE: City, Date — Mapbox — One-sentence plain-English description of what launched]
 
-**Deck:** [One sentence — who it's for, what specific outcome it delivers.]
+## [SUBHEADLINE: Who it's for and what specific outcome they get — one sentence]
 
-**[CITY, STATE — Month Day, Year] —** [¶1 — Announcement. 3–4 sentences as a journalist would lede: who, what, headline benefit.]
+**[City, State] — [Date] —** [¶1 Announcement: Who, what, headline benefit. 3–4 sentences as a journalist would lede. No jargon a smart non-expert wouldn't understand.]
 
-[¶2 — Customer problem. Customer's reality without the product. Name the friction, the workaround, the cost of the status quo. Use evidence. Do NOT mention the solution.]
+[¶2 Customer problem: The customer's reality without the product. Name the friction, workaround, and cost of the status quo. Use evidence — research, data, named customers. Do NOT mention the solution.]
 
-[¶3 — Today's workaround. What customers do today to overcome the problem — what they hack together, what they buy from competitors, what they leave on the table. Sets up the contrast with ¶4.]
+[¶3 Today's workaround: What customers are doing today to overcome the problem. What they hack together, what they buy elsewhere, what they leave on the table. Sets up the contrast with ¶4.]
 
-[¶4 — What we're launching. How the product solves the problem from the customer's perspective. Experience and outcome, not technical mechanism. Surface the WOW moment.]
+[¶4 What we're launching: How the product solves the problem from the customer's perspective. Focus on experience and outcome, not technical mechanism. Surface the WOW moment — the dimension where this is materially better.]
 
-> "[Leader quote — real VP/Director/GM. Human, not marketing copy. Why Mapbox, why now.]"
-> — [Name, Title], Mapbox
+> "[Leader quote — attributed to a real VP/Director/GM. Must sound human, not marketing copy. Should convey: why Mapbox is uniquely positioned, why now. Bad: 'We're excited to launch...' Good: 'For years, developers had to choose between...']" — [Name, Title, Mapbox]
 
-[¶5 — Customer voice + traction. What customers are doing or saying right now.]
+[¶5 Customer voice + traction: What customers are doing or saying right now. Include a customer quote — use a real Mapbox customer wherever possible, or the synthetic quote from I-FAQ Q13 if not.]
 
-> "[Customer quote — real customer if possible, synthetic from I-FAQ Q13 if not. Specific, emotional, concrete.]"
-> — [Name, Title, Company]
+> "[Customer quote — specific, emotional, concrete. Bad: 'Great product.' Good: 'I used to spend 20 minutes manually cleaning data. Now I run one query and it's done.']" — [Name, Role, Company type]
 
-[¶6 — Wrap. Call to action realistic for the launch stage (e.g. "Sign up for private preview at..."). Boilerplate follows.]
+[¶6 Wrap: Call to action realistic for the launch stage (e.g., "Sign up for private preview at..."). Followed by the official Mapbox boilerplate.]
 
-**Mapbox Boilerplate – Official [last updated YYYY]**
-
-[ABOUT MAPBOX® block — use the latest official copy; do not paraphrase.]
+**ABOUT MAPBOX®**
+Mapbox Boilerplate – Official [last updated <year>]
 
 ---
 
-## External FAQ (E-FAQ)
+## External FAQ
 
-> Customer-facing. Published on the product page. Carries SEO weight. Should be longer than the I-FAQ. Voice: first-person questions ("How do I...?"), "you" answers, plain language, present tense.
+*Customer-facing. Gets published on the product page. Written in present tense. Questions in first person ("How do I...?"). Do not mention v2.*
 
-### 1. What are we launching today?
-
+**1. What are we launching today?**
 [Define the feature in plain English.]
 
-### 2. What can I do now that I couldn't do before?
+**2. What can I do now that I couldn't do before?**
+[¶1: Business value prop + the customer problem with current state.]
+[¶2: What was built/changed; how it addresses the challenge; why customers will be delighted. Factual differentiation vs. competition is acceptable — not negative.]
 
-[¶1: business value prop + the customer problem with current state.]
+**3. How does the feature work?**
+[Include sub-questions if needed. Code examples, screenshots, or videos to illustrate customer value whenever possible.]
 
-[¶2: what was built/changed; how it addresses the challenge; why customers will be delighted. Factual differentiation acceptable here.]
+**4. What are some customer use cases?**
+[Highlight customers — real or representative — who'd benefit. Use named verticals and personas.]
 
-### 3. How does the feature work?
+**5. How much will the feature cost?**
+[If priced: summarize and link the Pricing doc. If free: justify with internal COGS, competitive offering and pricing, and proof of customer unwillingness to pay. Free is a defended decision, not a default.]
 
-[Sub-questions and answers as needed. Include code examples, screenshots, or videos to illustrate customer value whenever possible.]
+**6. When is the product available?**
+[Private preview → public preview → GA timeline.]
 
-### 4. What are some customer use cases?
+**7. How do customers get started?**
+[Link to product detail page, docs, code examples.]
 
-[Highlight customers (real or representative) who'd benefit. Named verticals and personas.]
-
-### 5. How much will the feature cost?
-
-[If priced: summarize and link the Pricing doc. If free: justify with Mapbox operations costs / internal COGS, competitive offering and pricing, proof of customer unwillingness to pay.]
-
-### 6. When is the product available?
-
-[Timeline: private preview → public preview → GA.]
-
-### 7. How do customers get started?
-
-[Link to the product detail page, docs, code examples.]
-
-### 8. Which platforms is this supported on?
-
-[iOS, Android, Cloud/Web — list explicitly.]
-
-### [Optional additional questions]
+**8. Which platforms is this supported on?**
+[iOS / Android / Cloud/Web — list explicitly.]
 
 ---
 
-## Internal FAQ (I-FAQ)
+## Internal FAQ
 
-> Mapbox-only. Surfaces every hard question Cherie, Anu, and engineering will ask. Question in bold, direct answer below. Don't soften.
+*Mapbox-only. Question in bold, direct answer below. If the answer is "we don't know yet," say that and state how you'll find out.*
 
-### 1. What problem does the feature solve?
+**1. What problem does the feature solve?**
+[Answer]
 
-[Direct answer.]
+**2. Whom does this solve the problem for?**
+[Focus on verticals and/or personas. Add target customer adopters where known.]
 
-### 2. Whom does this solve the problem for?
-
-[Verticals and/or personas. Target customer adopters where known.]
-
-### 3. Why should Mapbox solve this problem?
-
+**3. Why should Mapbox solve this problem?**
 [Why us, why now, why is this on our roadmap rather than a partner's.]
 
-### 4. How does the feature align with company goals?
+**4. How does the feature align with company goals?**
+[Tie to the named OKR or strategic priority. Connect to the business metric from the Introduction.]
 
-[Tie to the OKR or strategic priority. Connect the business metric named in the Introduction to the goal hierarchy.]
+**5. What capabilities are in scope?**
+[Answer]
 
-### 5. What capabilities are in scope?
+**6. What capabilities are out of scope? Are there any known deficiencies or limitations that should be called out to customers?**
+[Customer-facing limitations should be surfaced in E-FAQ Q2 or Q8.]
 
-[List.]
+**7. What alternatives are out there and how does our offering compare?**
+[Direct competitive comparison is allowed internally. Do not name competitors in external comms.]
 
-### 6. What capabilities are out of scope? Are there any known deficiencies or limitations that should be called out to customers?
-
-[List. Customer-facing limitations get surfaced in the E-FAQ.]
-
-### 7. What alternatives are out there and how does our offering compare?
-
-[Direct competitive comparison — internal only.]
-
-### 8. Are there any internal dependencies/blockers?
-
+**8. Are there any internal dependencies/blockers?**
 [Named teams and named owners.]
 
-### 9. What is pricing for the feature?
+**9. What is pricing for the feature?**
+[Internal pricing and packaging detail not publicly messaged. If a separate Pricing doc exists, summarize and link.]
 
-[Internal pricing information that won't be publicly messaged. If a separate Pricing doc exists, summarize and link.]
+**10. When are we launching the feature?**
+[More detailed than the public timeline: private preview → public preview → GA with target dates.]
 
-### 10. When are we launching the feature?
+**11. What is our adoption goal?**
+[At minimum, set a goal for the upcoming launch phase. Ideally for all phases. Metrics must be controllable, actionable, and reflective of lived user experience. No weasel words ("significant," "excellent") — use numbers. If using output metrics (ARR, adoption), explain the causal chain. If using input metrics, explain how they connect to desired impact.]
 
-[Detailed timeline: private preview → public preview → GA with target dates.]
-
-### 11. What is our adoption goal?
-
-[At minimum, the upcoming launch phase. Ideally all phases.]
-
-### 12. How will we measure adoption?
-
+**12. How will we measure adoption?**
 [Dashboard, target adopters sheet, or other concrete instrumentation.]
 
-### 13. Sample customer quote
-
-> "[Synthetic but grounded quote from a customer already interested in the feature — describe their challenge, how the feature solves it, and the business impact. This quote populates ¶5 of the press release.]"
-> — [Persona, Title, Representative Company]
+**13. Sample customer quote.**
+[Required even if no real customer is on record. Write a synthetic but grounded quote from a customer already interested in the feature: describe their challenge, how the feature solves it, and the business impact. This quote populates ¶5 of the press release.]
 
 ---
-
-## Appendix
-
-[Anything beyond the 6-page main-body cap moves here.]
+*Mapbox Confidential | Page X of Y*
