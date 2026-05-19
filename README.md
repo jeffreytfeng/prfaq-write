@@ -36,6 +36,8 @@ Output is a table with section reference, severity (🔴 blocks approval / 🟡 
 /plugin install prfaq-write@prfaq-write
 ```
 
+For the richest context, install this alongside **[mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain)**. The skill automatically picks up goals, stakeholder context, active tasks, and your voice profile from that project.
+
 ## Use
 
 ```
@@ -77,7 +79,9 @@ The skill is **self-contained** — it works against any project layout. If the 
 | `Knowledge/Context/my-voice.md` | Applies your tone and formatting preferences to the draft. |
 | Google Drive MCP tools | If available, searches for relevant meeting notes, research, or existing PRFAQ drafts. |
 
-None of these are required. Without them the skill uses the bundled template, neutral PM voice, and the inline Mapbox style rules.
+These files follow the layout of **[mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain)** — a Claude Code knowledge base for Mapbox PMs. If you're setting up from scratch, start there: the skill will automatically pick up all of the above context once that project is in place.
+
+Without any of these files the skill uses the bundled template, neutral PM voice, and the inline Mapbox style rules.
 
 ## Mapbox PRFAQ — quick refresher
 
