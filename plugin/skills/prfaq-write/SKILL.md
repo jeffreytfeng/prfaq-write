@@ -56,7 +56,7 @@ If no section is specified, ask which section the user wants help with.
 
 - Read `Tasks/active.md` for in-progress PRFAQ work.
 - Read `Knowledge/Context/goals.md` for OKR alignment — the introduction explicitly asks how the feature aligns with company goals.
-- Search Google Drive (`mcp__claude_ai_Google_Drive__search_files`) for relevant meeting notes, research, or existing PRFAQ drafts; fall back to `Raw/` if Drive MCP is unavailable.
+- Search Google Drive for relevant meeting notes, research, or existing PRFAQ drafts. Prefer the `/gws-drive` skill (uses the `gws` CLI); fall back to `mcp__claude_ai_Google_Drive__search_files` if gws is unavailable; fall back to `Raw/` if neither is set up. **`/gws-drive` requires the `gws` CLI to be installed and authenticated against your Google account — see the [Google Workspace CLI setup guide](https://mapbox.atlassian.net/wiki/spaces/KB/pages/2624880645/Google+Workspace+CLI+gws+User+Setup+Guide).**
 - Check `Knowledge/People/` for stakeholder perspectives that should be reflected — especially Cherie Wong and Anu Sharma (the approvers).
 - Look for: customer pain points, named customer quotes, business-metric baselines, competitive signals, hard constraints, pricing precedent.
 - Reference examples (use to calibrate tone, depth, and format):

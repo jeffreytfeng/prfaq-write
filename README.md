@@ -77,7 +77,7 @@ The skill is **self-contained** — it works against any project layout. If the 
 | `Knowledge/People/Cherie Wong.md`, `Knowledge/People/Anu Sharma.md` | Reflects known priorities of the approvers in the framing. |
 | `Tasks/active.md` | Picks up any in-progress PRFAQ work and recent decisions. |
 | `Knowledge/Context/my-voice.md` | Applies your tone and formatting preferences to the draft. |
-| Google Drive MCP tools | If available, searches for relevant meeting notes, research, or existing PRFAQ drafts. |
+| `/gws-drive` skill or Google Drive MCP | Searches for relevant meeting notes, research, or existing PRFAQ drafts. The skill prefers `/gws-drive` (uses the `gws` CLI); falls back to Drive MCP if gws is unavailable. **`/gws-drive` requires the `gws` CLI to be installed and authenticated — see the [Google Workspace CLI setup guide](https://mapbox.atlassian.net/wiki/spaces/KB/pages/2624880645/Google+Workspace+CLI+gws+User+Setup+Guide).** |
 
 These files follow the layout of **[mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain)** — a Claude Code knowledge base for Mapbox PMs. If you're setting up from scratch, start there: the skill will automatically pick up all of the above context once that project is in place.
 
