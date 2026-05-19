@@ -22,7 +22,7 @@ A Mapbox PRFAQ is **6 pages max** with four parts, in this order:
 
 Anything beyond 6 pages goes to an appendix. Include page numbers and mark **Mapbox Confidential** in the footer.
 
-The PRFAQ is reviewed at least **3 months before launch**. Approval comes from Cherie (CTO/SVP) and Anu (VP of Product), plus Peter (SVP). The PRFAQ is a living document — keep updating it through preview.
+The PRFAQ is reviewed at least **3 months before launch**. Approval comes from Cherie (CTO/SVP) and Anu (VP of Product). The PRFAQ is a living document — keep updating it through preview.
 
 **The PRFAQ names candidate customers.** It provides as much detail and specificity as possible on which customers would benefit, how they would achieve their goals, and why they would find the product remarkable. If you cannot name a customer and clearly identify their needs to win their business, the PRFAQ will not meet expectations.
 
@@ -351,7 +351,7 @@ Before delivering a draft, check:
 - [ ] PRFAQ is being scheduled at least **3 months before launch.**
 - [ ] **Manager + service-organization leader have reviewed** before the formal review meeting — they catch the questions internal and external stakeholders will ask.
 - [ ] **Legal team review (Laurel Finch) has happened** before the PRFAQ Review Meeting — Legal is engaged at the PRFAQ stage, not after, and their review covers the new feature/product before coding starts.
-- [ ] Cherie + Anu + **Peter (SVP)** are on the review invite.
+- [ ] Cherie + Anu are on the review invite.
 - [ ] Engineers and product marketers have reviewed before the meeting.
 - [ ] If pricing is non-free, the separate Pricing doc is drafted (or scheduled for the 1-month-pre-launch pricing review).
 - [ ] After approval, the plan is to engage Product Marketing for the product introduction plan within the same week.
@@ -466,7 +466,7 @@ Use 🔴 for issues that undermine the core argument or would block approval (un
 - The PRFAQ is a living document. Keep updating it through preview as customer learnings come in.
 - **Legal review happens at the PRFAQ stage**, before coding starts — not after the PRFAQ is approved. Loop in Laurel Finch (Legal) before the formal review meeting with Cherie and Anu.
 - **Pre-review path:** PM → manager → service organization leader → Legal (Laurel) → PRFAQ Review Meeting (Cherie + Anu + Peter, plus Service / Marketing / Finance / Customer Engagement stakeholders). After approval, engage Product Marketing immediately to start the product introduction plan.
-- **Peter review is required.** Confirm that what you're shipping has been reviewed with Peter (SVP) before it goes to public use. His context refines the proposal, helps disseminate information with customers and internal teams, and validates direction. If it's not being reviewed with Peter, it's a disservice to the team and the business.
+- **Peter review is required.** Confirm that what you're shipping has been reviewed with Peter (CEO) before it goes to public use. His context refines the proposal, helps disseminate information with customers and internal teams, and validates direction. If it's not being reviewed with Peter, it's a disservice to the team and the business.
 - After PRFAQ approval, open Legal-followup, Security, and Billing tickets within one week.
 - **Don't mention v2 in the E-FAQ.** It signals the product is not ready and delays customer action.
 - **Don't use weasel words ("significant," "excellent") as substitutes for metrics.** Editorialization can follow a metric ("grew 30%, significantly ahead of goal"), but never replace it. A metric that cannot be stated precisely is a strategy that hasn't been resolved.
