@@ -54,10 +54,12 @@ If no section is specified, ask which section the user wants help with.
 
 ### Step 2: Gather context
 
-- Read `Tasks/active.md` for in-progress PRFAQ work.
-- Read `Knowledge/Context/goals.md` for OKR alignment — the introduction explicitly asks how the feature aligns with company goals.
-- Search Google Drive for relevant meeting notes, research, or existing PRFAQ drafts. Prefer the `/gws-drive` skill (uses the `gws` CLI); fall back to `mcp__claude_ai_Google_Drive__search_files` if gws is unavailable; fall back to `Raw/` if neither is set up. **`/gws-drive` requires the `gws` CLI to be installed and authenticated against your Google account — see the [Google Workspace CLI setup guide](https://mapbox.atlassian.net/wiki/spaces/KB/pages/2624880645/Google+Workspace+CLI+gws+User+Setup+Guide).**
-- Check `Knowledge/People/` for stakeholder perspectives that should be reflected — especially Cherie Wong and Anu Sharma (the approvers).
+> **Context files below follow the [mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain) project layout.** Set up that project first to enable full context enrichment — the skill picks up all of these files automatically once it's in place. Without them the skill drafts from the inline guidance and bundled template only.
+
+- Read `Tasks/active.md` ([mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain)) for in-progress PRFAQ work.
+- Read `Knowledge/Context/goals.md` ([mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain)) for OKR alignment — the introduction explicitly asks how the feature aligns with company goals.
+- Search Google Drive for relevant meeting notes, research, or existing PRFAQ drafts. Prefer the `/gws-drive` skill (uses the `gws` CLI); fall back to `mcp__claude_ai_Google_Drive__search_files` if gws is unavailable; fall back to `Raw/` ([mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain)) if neither is set up. **`/gws-drive` requires the `gws` CLI to be installed and authenticated against your Google account — see the [Google Workspace CLI setup guide](https://mapbox.atlassian.net/wiki/spaces/KB/pages/2624880645/Google+Workspace+CLI+gws+User+Setup+Guide).**
+- Check `Knowledge/People/` ([mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain)) for stakeholder perspectives that should be reflected — especially Cherie Wong and Anu Sharma (the approvers).
 - Look for: customer pain points, named customer quotes, business-metric baselines, competitive signals, hard constraints, pricing precedent.
 - Reference examples (use to calibrate tone, depth, and format):
   - `1rMSMGrtJ5MGXgYv_ExWZ7rzHyOeZPsco9P2jM5wmZb4` — MTS Incremental Updates PRFAQ.
@@ -83,7 +85,7 @@ Before drafting any PR section, work through these 12 questions. The answers won
 
 ### Step 2b: Apply voice profile
 
-Read `Knowledge/Context/my-voice.md` — apply its tone and formatting preferences. If absent, use a neutral PM voice and the Mapbox style rules in Step 5 below.
+Read `Knowledge/Context/my-voice.md` ([mapbox-second-brain](https://github.com/jeffreytfeng/mapbox-second-brain)) — apply its tone and formatting preferences. If absent, use a neutral PM voice and the Mapbox style rules in Step 5 below.
 
 ### Step 3: Draft using section-specific guidance
 
